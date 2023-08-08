@@ -1,30 +1,34 @@
 #include <iostream>
+#include <memory>
+#include <ctime>
 
 #include "Board.h"
 #include "Player.h"
 #include "Timer.h"
 
 const float frameTime = 0.5f;
-bool isOpen = true;
 
 int main()
 {
-	Board board;
-	Player player;
+	srand(time(0));
+	std::unique_ptr<Board> board = std::make_unique<Board>();
+	std::unique_ptr<Player> player = std::make_unique<Player>();
 	xe::Timer timer;
 	
-	player.Init(&board);
-	while (isOpen)
+	player->Init(board.get());
+
+	while (!player->IsGameOver())
 	{
-		player.CheckInput();
+		player->CheckInput();
 		if (timer.GetElapsed() >= frameTime)
 		{
 			timer.Reset();
-			player.Update(&board);
-			board.Draw();
+			player->Update(board.get());
+			board->Draw();
+			std::cout << "Score: " << player->GetScore();
 		}
 	}
 
-
+	std::cout << std::endl << "== GAME OVER ==" << std::endl;
 	return 0;
 }
