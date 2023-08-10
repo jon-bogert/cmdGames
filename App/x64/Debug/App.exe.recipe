@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>D:\repos\C++\cmdSnake\x64\Debug\App.exe</FullPath>
+      <FullPath>C:\repos\C++\cmdSnake\x64\Debug\App.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

@@ -6,7 +6,7 @@
 #include "Player.h"
 #include "Timer.h"
 
-const float frameTime = 0.5f;
+const float frameTime = 0.3f;
 
 int main()
 {

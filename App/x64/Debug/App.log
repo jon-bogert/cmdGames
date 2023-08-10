@@ -1,6 +1,7 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (CmdSnake.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (CmdSnake.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Board.cpp
   Main.cpp
+C:\repos\C++\cmdSnake\App\Main.cpp(13,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Player.cpp
   Generating Code...
-  App.vcxproj -> D:\repos\C++\cmdSnake\x64\Debug\App.exe
+  App.vcxproj -> C:\repos\C++\cmdSnake\x64\Debug\App.exe

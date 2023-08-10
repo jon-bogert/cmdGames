@@ -5,8 +5,8 @@
 struct Position;
 class Board
 {
-	uint32_t _width = 16;
-	uint32_t _height = 16;
+	uint32_t _width = 10;
+	uint32_t _height = 10;
 	char _emptySymbol = '.';
 	char _fruitSymbol = '#';
 	uint32_t _fruitX;
