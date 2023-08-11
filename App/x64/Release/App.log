@@ -1,9 +1,0 @@
-﻿  Board.cpp
-  Main.cpp
-C:\repos\C++\cmdSnake\App\Main.cpp(13,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Player.cpp
-  Generating code
-  Previous IPDB was built with incompatible compiler, fall back to full compilation.
-  All 198 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
-  Finished generating code
-  App.vcxproj -> C:\repos\C++\cmdSnake\x64\Release\App.exe
