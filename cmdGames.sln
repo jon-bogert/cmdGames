@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "battleship", "battleship\ba
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hangman", "hangman\hangman.vcxproj", "{46088E63-0187-4FA6-A141-2E81FA515488}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wordle", "wordle\wordle.vcxproj", "{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{46088E63-0187-4FA6-A141-2E81FA515488}.Release|x64.Build.0 = Release|x64
 		{46088E63-0187-4FA6-A141-2E81FA515488}.Release|x86.ActiveCfg = Release|Win32
 		{46088E63-0187-4FA6-A141-2E81FA515488}.Release|x86.Build.0 = Release|Win32
+		{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}.Debug|x64.ActiveCfg = Debug|x64
+		{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}.Debug|x64.Build.0 = Debug|x64
+		{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}.Debug|x86.ActiveCfg = Debug|Win32
+		{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}.Debug|x86.Build.0 = Debug|Win32
+		{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}.Release|x64.ActiveCfg = Release|x64
+		{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}.Release|x64.Build.0 = Release|x64
+		{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}.Release|x86.ActiveCfg = Release|Win32
+		{1E4C8427-ABD3-4C8E-A394-F2B8CE9A27B2}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
