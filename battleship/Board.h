@@ -20,7 +20,7 @@ class Board
 	std::vector<char> _cpuVisual;
 	Ships _playerShips;
 	Ships _cpuShips;
-	bool _isInSetup = false; // TODO set to true
+	bool _isInSetup = true;
 
 public:
 	Board();
