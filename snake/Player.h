@@ -21,6 +21,7 @@ class Player
 	Direction _direction = Direction::Right;
 	bool _isGameOver = false;
 	size_t _score = 0;
+	size_t _highScore = 0;
 
 public:
 	Player();
@@ -31,6 +32,8 @@ public:
 
 	bool IsGameOver() const { return _isGameOver; }
 	size_t GetScore() const { return _score; }
+	size_t GetHighScore() const { return _highScore; }
+	void SaveHighScore();
 
 private:
 	Position NextPosition(const Board* board);

@@ -25,9 +25,11 @@ int main()
 			timer.Reset();
 			player->Update(board.get());
 			board->Draw();
-			std::cout << "Score: " << player->GetScore();
+			std::cout << "Score:      " << player->GetScore() << std::endl;
+			std::cout << "High Score: " << player->GetHighScore();
 		}
 	}
+	player->SaveHighScore();
 
 	std::cout << std::endl << "== GAME OVER ==" << std::endl;
 	return 0;

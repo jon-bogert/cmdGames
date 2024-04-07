@@ -1,9 +1,15 @@
 #include "Player.h"
 
 #include "Board.h"
+#include "AppData.h"
 
 #include<Windows.h>
 #include <iostream>
+#include <filesystem>
+#include <fstream>
+
+#define FILEPATH _APPDATA_ + "\\cmdGames\\snake\\highscore.bin"
+#define PATH_ONLY _APPDATA_ + "\\cmdGames\\snake\\"
 
 Player::Player()
 {
@@ -24,6 +30,25 @@ void Player::Init(Board* board)
 	}
 
 	board->NewFruit(_positions);
+
+	if (!std::filesystem::exists(FILEPATH))
+		return;
+
+	std::ifstream file(FILEPATH, std::ios::binary);
+
+	size_t size = sizeof(size_t);
+	std::vector<char> scoreData;
+	scoreData.resize(size);
+	try
+	{
+		file.get(scoreData.data(), size);
+		std::memcpy(&_highScore, scoreData.data(), size);
+	}
+	catch (std::exception e)
+	{
+		std::filesystem::remove(FILEPATH);
+		_highScore = 0;
+	}
 }
 
 void Player::Update(Board* board)
@@ -89,6 +114,28 @@ bool Player::CheckNext(Board* board, Position next)
 		return true;
 	}
 	return false;
+}
+
+void Player::SaveHighScore()
+{
+	if (_score <= _highScore)
+		return;
+
+	_highScore = _score;
+
+	if (!std::filesystem::exists(PATH_ONLY))
+		std::filesystem::create_directories(PATH_ONLY);
+
+	std::ofstream file(FILEPATH, std::ios::binary);
+
+	std::vector<char> scoreData;
+	size_t size = sizeof(size_t);
+	scoreData.resize(size);
+
+	std::memcpy(scoreData.data(), &_highScore, size);
+
+	for (char b : scoreData)
+		file.put(b);
 }
 
 Position Player::NextPosition(const Board* board)
